@@ -1,0 +1,83 @@
+{% load static %} 
+{% load static %} 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}my project{%endblock title%}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-rtl.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+<style>
+    
+footer {
+    padding: 2rem 0;
+    background-color: #343a40;
+    color: #fff;
+}
+
+footer i {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 1.2rem 0.5rem 0 0;
+}
+
+footer i:hover {
+    color: #1ebba3;
+}
+
+.footer-hr {
+    width: 100%;
+    border-top: 0.2rem solid #666b71;
+    margin-top: 3rem;
+}
+
+.body_size{
+    padding-top:90px;
+    padding-bottom:90px;
+}
+
+.blog-p{
+    text-align: justify;
+    line-height: 30px;
+    font-size: 20px;
+}
+.blogimg{
+    width: 280px;
+    height: 280px;
+    padding: 18px;
+}
+
+.posts{
+    border: 1px solid black !important;
+    border-radius: 10px;
+    height: 500px;
+    margin: 10px;
+  }
+.posts:hover{
+    box-shadow: 3px 3px 15px 2px rgba(0, 0, 255, .2);
+  
+}
+</style>
+</head>
+<body class="ltr">
+    {% include 'pertials/messages.html'%}
+
+    <div id="home">
+        <!--navbar-->
+        {% include 'pertials/navbar.html' %}
+    </div>
+    {%block body%} {%endblock body%}
+
+    <footer>
+        {% include 'pertials/footer.html' %}
+    </footer>
+
+    
+    {% include  'pertials/script.html'%} 
+</body>
+</html>

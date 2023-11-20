@@ -1,0 +1,49 @@
+
+footer {
+    padding: 2rem 0;
+    background-color: #343a40;
+    color: #fff;
+}
+
+footer i {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 1.2rem 0.5rem 0 0;
+}
+
+footer i:hover {
+    color: #1ebba3;
+}
+
+.footer-hr {
+    width: 100%;
+    border-top: 0.2rem solid #666b71;
+    margin-top: 3rem;
+}
+
+.body_size{
+    padding-top:90px;
+    padding-bottom:90px;
+}
+
+.blog-p{
+    text-align: justify;
+    line-height: 30px;
+    font-size: 20px;
+}
+.blogimg{
+    width: 280px;
+    height: 280px;
+    padding: 18px;
+}
+
+.posts{
+    border: 1px solid black !important;
+    border-radius: 10px;
+    height: 500px;
+    margin: 10px;
+  }
+.posts:hover{
+    box-shadow: 3px 3px 15px 2px rgba(0, 0, 255, .2);
+  
+}

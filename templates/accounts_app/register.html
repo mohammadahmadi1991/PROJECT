@@ -1,0 +1,23 @@
+{% extends 'mainTemplates.html' %}
+
+{%block body%}
+<div class="container-fluid body_size ">
+    <h1 class="text-center text-primary h-font" style="color:green !important;">User Register</h1>
+    <div class=" container row ">
+        <div class="col-8 " style="padding-top:60px;">
+            <form class="container login_form " action="{% url "accounts:register" %}" method="post" style="width: 450px; ">
+                {%csrf_token%}
+                {{form.as_p}}
+    
+    <input class="btn btn-success btn-block" style="height: 50px !important; box-shadow: 2px 2px 3px rgb(127, 127, 127);" type="submit" value="Create Account">
+            </form>
+        </div>
+        <div class="col-1"></div>
+
+        <div class="col-2">
+            <img src="{{media_url}}/image/logo/3.png" alt="login photo">
+        </div>
+        <div class="col-1"></div>
+    </div>   
+</div>
+{%endblock body%}

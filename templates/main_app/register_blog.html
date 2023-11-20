@@ -1,0 +1,23 @@
+{% extends 'mainTemplates.html' %}
+
+
+
+{% block body %}
+<div class="body_size" >
+    <form method="post"  enctype="multipart/form-data" >
+        {% csrf_token %}
+        <section class="d-flex justify-content-around align-items-center" style="width:100%;">
+            <div>
+                {{form.as_p}}
+            </div>
+            <div>
+                <img src="{{media_url}}/image/logo/2-2.png" alt="" width="400px">
+            </div>
+        </section>
+        <div class="d-flex">
+            <input type="submit" value="create" class="btn btn-success btn-block " style="width:150px !important; margin:10px 10px 50px 200px">        
+        </div>
+    </form>
+</div>
+
+{% endblock body %}

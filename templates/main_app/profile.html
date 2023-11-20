@@ -1,0 +1,36 @@
+{% extends 'mainTemplates.html' %}
+{%block body%}
+<div class=" text-center" style="margin:75px;">
+    <div>
+        <div  class="row" style="margin:20px 25px;">
+            <div style="margin:0px 20px 0px 0px;">
+            <img src="{{info.image_url}}" alt="" width="300px" height="300px" >
+            </div>
+            <div>
+                <h1 style="margin-top:50px;">{{info.email}}</h1>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row text-center" style="margin:20px 100px 20px 100px; border:1px solid gray;"></div>
+
+
+    <div class="row">
+        {% for item in blogs %}
+                <div class="col-4">
+                    <div class="posts">
+                        <a href="{%url 'main:article_detail' item.blog_title %}">
+                            <img src="{{media_url}}{{item.main_img}}" alt="blog image" class="blogimg">
+                            <p style="text-align:left; padding:10px;">{{item.blog_text| truncatewords:30}}</p>
+                        </a>
+                        <a href="{%url 'main:article_detail' item.blog_title %}">Read more</a>
+                    </div>
+                </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{%endblock body%}
